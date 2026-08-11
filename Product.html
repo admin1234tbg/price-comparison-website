@@ -1,0 +1,483 @@
+```html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PriceCompare - Compare Product Prices</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* Header */
+        header {
+            background: #172554;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #172554, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            max-width: 650px;
+            margin: auto;
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 17px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-box button {
+            background: #f97316;
+            color: white;
+            border: none;
+            padding: 0 28px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background: #ea580c;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 35px 7%;
+            text-align: center;
+        }
+
+        .categories h2 {
+            margin-bottom: 20px;
+        }
+
+        .category-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            cursor: pointer;
+        }
+
+        .category:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Products */
+        .products {
+            padding: 20px 7% 60px;
+        }
+
+        .products h2 {
+            margin-bottom: 25px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .best-price {
+            color: #16a34a;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .compare-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .compare-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* Footer */
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media(max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-box input {
+                padding: 15px;
+            }
+
+            .search-box button {
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        Price<span>Compare</span>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <h1>Compare Prices. Save Money.</h1>
+
+    <p>
+        Find the best price for your favorite products across multiple stores.
+    </p>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a product..."
+        >
+
+        <button onclick="searchProduct()">
+            Search
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+
+    <h2>Popular Categories</h2>
+
+    <div class="category-container">
+
+        <div class="category">📱 Mobiles</div>
+        <div class="category">💻 Laptops</div>
+        <div class="category">🎧 Electronics</div>
+        <div class="category">⌚ Smart Watches</div>
+        <div class="category">📷 Cameras</div>
+        <div class="category">🏠 Home Appliances</div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+
+    <h2>Popular Products</h2>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+
+            <img
+                src="https://via.placeholder.com/300x200?text=Smartphone"
+                alt="Smartphone"
+            >
+
+            <h3>iQOO Neo Series Smartphone</h3>
+
+            <p>
+                12GB RAM | 256GB Storage | AMOLED Display
+            </p>
+
+            <div class="best-price">
+                Starting ₹34,999
+            </div>
+
+            <button
+                class="compare-btn"
+                onclick="compareProduct('iQOO Neo Series Smartphone')"
+            >
+                Compare Prices
+            </button>
+
+        </div>
+
+
+        <!-- Product 2 -->
+        <div class="product-card">
+
+            <img
+                src="https://via.placeholder.com/300x200?text=Laptop"
+                alt="Laptop"
+            >
+
+            <h3>ASUS VivoBook Laptop</h3>
+
+            <p>
+                16GB RAM | 512GB SSD | Intel Processor
+            </p>
+
+            <div class="best-price">
+                Starting ₹39,999
+            </div>
+
+            <button
+                class="compare-btn"
+                onclick="compareProduct('ASUS VivoBook Laptop')"
+            >
+                Compare Prices
+            </button>
+
+        </div>
+
+
+        <!-- Product 3 -->
+        <div class="product-card">
+
+            <img
+                src="https://via.placeholder.com/300x200?text=Headphones"
+                alt="Headphones"
+            >
+
+            <h3>Wireless Headphones</h3>
+
+            <p>
+                Noise Cancellation | Bluetooth | 40 Hours Battery
+            </p>
+
+            <div class="best-price">
+                Starting ₹2,999
+            </div>
+
+            <button
+                class="compare-btn"
+                onclick="compareProduct('Wireless Headphones')"
+            >
+                Compare Prices
+            </button>
+
+        </div>
+
+
+        <!-- Product 4 -->
+        <div class="product-card">
+
+            <img
+                src="https://via.placeholder.com/300x200?text=Smartwatch"
+                alt="Smartwatch"
+            >
+
+            <h3>Smart Watch</h3>
+
+            <p>
+                AMOLED | Heart Rate | Bluetooth Calling
+            </p>
+
+            <div class="best-price">
+                Starting ₹1,999
+            </div>
+
+            <button
+                class="compare-btn"
+                onclick="compareProduct('Smart Watch')"
+            >
+                Compare Prices
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section
+    id="about"
+    style="padding:50px 7%; text-align:center; background:white;"
+>
+
+    <h2>About PriceCompare</h2>
+
+    <p style="max-width:700px; margin:15px auto; color:#666; line-height:1.6;">
+
+        PriceCompare helps users find and compare product prices
+        from different online stores in one place. Our goal is to
+        help you find the best deal quickly and easily.
+
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>© 2026 PriceCompare. All Rights Reserved.</p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+    function searchProduct() {
+
+        let product =
+            document.getElementById("searchInput").value;
+
+        if (product.trim() === "") {
+
+            alert("Please enter a product name.");
+
+            return;
+        }
+
+        alert(
+            "Searching prices for: " + product
+        );
+
+        // Later:
+        // Send product to Flask/Python backend
+        // Backend will perform price scraping
+    }
+
+
+    function compareProduct(product) {
+
+        alert(
+            "Comparing prices for: " + product
+        );
+
+        // Later:
+        // Fetch real prices from backend
+    }
+
+</script>
+
+</body>
+</html>
+```
