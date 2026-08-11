@@ -3,14 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PriceCompare - Best Price Finder</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -23,20 +20,18 @@
             color: #222;
         }
 
-        /* ================= HEADER ================= */
-
+        /* HEADER */
         header {
             background: #172554;
             color: white;
             padding: 18px 7%;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 27px;
+            font-size: 28px;
             font-weight: bold;
         }
 
@@ -48,26 +43,17 @@
             color: white;
             text-decoration: none;
             margin-left: 25px;
-            font-size: 15px;
         }
 
         nav a:hover {
             color: #38bdf8;
         }
 
-
-        /* ================= HERO ================= */
-
+        /* HERO */
         .hero {
-            background: linear-gradient(
-                135deg,
-                #172554,
-                #2563eb
-            );
-
+            background: linear-gradient(135deg, #172554, #2563eb);
             color: white;
             text-align: center;
-
             padding: 75px 20px;
         }
 
@@ -81,43 +67,30 @@
             margin-bottom: 30px;
         }
 
-
-        /* ================= SEARCH ================= */
-
+        /* SEARCH */
         .search-box {
             max-width: 700px;
             margin: auto;
-
             background: white;
-
             display: flex;
-
             border-radius: 10px;
-
             overflow: hidden;
         }
 
         .search-box input {
             flex: 1;
-
             border: none;
             outline: none;
-
             padding: 18px;
-
             font-size: 16px;
         }
 
         .search-box button {
             border: none;
-
             background: #f97316;
             color: white;
-
             padding: 0 30px;
-
             font-size: 16px;
-
             cursor: pointer;
         }
 
@@ -125,12 +98,9 @@
             background: #ea580c;
         }
 
-
-        /* ================= CATEGORIES ================= */
-
+        /* CATEGORIES */
         .categories {
             padding: 45px 7%;
-
             text-align: center;
         }
 
@@ -140,26 +110,17 @@
 
         .category-container {
             display: flex;
-
             justify-content: center;
-
             gap: 15px;
-
             flex-wrap: wrap;
         }
 
         .category {
             background: white;
-
             padding: 16px 25px;
-
             border-radius: 10px;
-
-            box-shadow:
-                0 3px 10px rgba(0,0,0,0.08);
-
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
             cursor: pointer;
-
             transition: 0.3s;
         }
 
@@ -167,9 +128,7 @@
             transform: translateY(-5px);
         }
 
-
-        /* ================= PRODUCTS ================= */
-
+        /* PRODUCTS */
         .products {
             padding: 30px 7% 70px;
         }
@@ -179,144 +138,79 @@
         }
 
         .product-grid {
-
             display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(260px, 1fr));
-
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
 
-
-        /* ================= PRODUCT CARD ================= */
-
+        /* PRODUCT CARD */
         .product-card {
-
             background: white;
-
             border-radius: 15px;
-
             padding: 20px;
-
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.08);
-
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             transition: 0.3s;
-
             position: relative;
         }
 
         .product-card:hover {
             transform: translateY(-6px);
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
 
-
-        /* ================= PRODUCT IMAGE ================= */
-
+        /* IMAGE */
         .product-image {
-
             width: 100%;
-
             height: 220px;
-
             object-fit: contain;
-
             margin-bottom: 15px;
         }
 
-
-        /* ================= BADGE ================= */
-
+        /* BADGE */
         .badge {
-
             position: absolute;
-
             top: 15px;
             left: 15px;
-
             background: #16a34a;
-
             color: white;
-
             padding: 6px 10px;
-
             border-radius: 5px;
-
             font-size: 12px;
-
             font-weight: bold;
         }
 
-
-        /* ================= PRODUCT DETAILS ================= */
-
         .product-card h3 {
-
             font-size: 19px;
-
             margin-bottom: 10px;
         }
 
         .product-card p {
-
             color: #666;
-
             font-size: 14px;
-
             line-height: 1.5;
-
             margin-bottom: 12px;
         }
 
-
-        /* ================= RATING ================= */
-
         .rating {
-
             color: #f59e0b;
-
             margin-bottom: 10px;
-
-            font-size: 14px;
         }
 
-
-        /* ================= PRICE ================= */
-
         .best-price {
-
             color: #16a34a;
-
             font-size: 23px;
-
             font-weight: bold;
-
             margin-bottom: 15px;
         }
 
-
-        /* ================= COMPARE BUTTON ================= */
-
         .compare-btn {
-
             width: 100%;
-
             padding: 13px;
-
             border: none;
-
             border-radius: 8px;
-
             background: #2563eb;
-
             color: white;
-
             font-size: 15px;
-
             cursor: pointer;
         }
 
@@ -324,15 +218,10 @@
             background: #1d4ed8;
         }
 
-
-        /* ================= COMPARISON ================= */
-
+        /* COMPARISON */
         #comparison {
-
             display: none;
-
             padding: 50px 7%;
-
             background: white;
         }
 
@@ -341,55 +230,38 @@
         }
 
         .comparison-box {
-
             overflow-x: auto;
         }
 
         table {
-
             width: 100%;
-
             border-collapse: collapse;
-
             min-width: 650px;
         }
 
         th,
         td {
-
             border: 1px solid #ddd;
-
             padding: 15px;
-
             text-align: center;
         }
 
         th {
-
             background: #172554;
-
             color: white;
         }
 
         .lowest {
-
             color: #16a34a;
-
             font-weight: bold;
         }
 
         .buy-btn {
-
             background: #f97316;
-
             color: white;
-
             border: none;
-
             padding: 9px 16px;
-
             border-radius: 6px;
-
             cursor: pointer;
         }
 
@@ -397,51 +269,33 @@
             background: #ea580c;
         }
 
-
-        /* ================= ABOUT ================= */
-
+        /* ABOUT */
         .about {
-
             padding: 60px 7%;
-
             text-align: center;
-
             background: #f8fafc;
         }
 
         .about p {
-
             max-width: 750px;
-
             margin: 15px auto;
-
             color: #666;
-
             line-height: 1.7;
         }
 
-
-        /* ================= FOOTER ================= */
-
+        /* FOOTER */
         footer {
-
             background: #172554;
-
             color: white;
-
             text-align: center;
-
             padding: 25px;
         }
 
-
-        /* ================= MOBILE ================= */
-
+        /* MOBILE */
         @media(max-width: 600px) {
 
             header {
                 flex-direction: column;
-
                 gap: 15px;
             }
 
@@ -469,638 +323,446 @@
                 height: 180px;
             }
         }
-
     </style>
-
 </head>
-
 
 <body>
 
+    <!-- HEADER -->
+    <header>
 
-<!-- ================================================= -->
-<!-- HEADER -->
-<!-- ================================================= -->
-
-<header>
-
-    <div class="logo">
-        Price<span>Compare</span>
-    </div>
-
-    <nav>
-
-        <a href="#">Home</a>
-
-        <a href="#products">
-            Products
-        </a>
-
-        <a href="#categories">
-            Categories
-        </a>
-
-        <a href="#about">
-            About
-        </a>
-
-    </nav>
-
-</header>
-
-
-
-<!-- ================================================= -->
-<!-- HERO -->
-<!-- ================================================= -->
-
-<section class="hero">
-
-    <h1>
-        Compare Prices. Save Money.
-    </h1>
-
-    <p>
-        Find the best deals from different online stores.
-    </p>
-
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search product..."
-        >
-
-        <button onclick="searchProduct()">
-            🔍 Search
-        </button>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================================================= -->
-<!-- CATEGORIES -->
-<!-- ================================================= -->
-
-<section
-    class="categories"
-    id="categories"
->
-
-    <h2>
-        Popular Categories
-    </h2>
-
-
-    <div class="category-container">
-
-        <div class="category">
-            📱 Mobiles
+        <div class="logo">
+            Price<span>Compare</span>
         </div>
 
-        <div class="category">
-            💻 Laptops
-        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </nav>
 
-        <div class="category">
-            🎧 Electronics
-        </div>
-
-        <div class="category">
-            ⌚ Smart Watches
-        </div>
-
-        <div class="category">
-            📷 Cameras
-        </div>
-
-        <div class="category">
-            🏠 Home Appliances
-        </div>
-
-    </div>
-
-</section>
+    </header>
 
 
+    <!-- HERO -->
+    <section class="hero">
 
-<!-- ================================================= -->
-<!-- PRODUCTS -->
-<!-- ================================================= -->
+        <h1>
+            Compare Prices. Save Money.
+        </h1>
 
-<section
-    class="products"
-    id="products"
->
+        <p>
+            Find the best deals from different online stores.
+        </p>
 
-    <h2>
-        Popular Products
-    </h2>
+        <div class="search-box">
 
-
-    <div class="product-grid">
-
-
-
-        <!-- ================================================= -->
-        <!-- PRODUCT 1 -->
-        <!-- ================================================= -->
-
-        <div class="product-card">
-
-            <div class="badge">
-                BEST DEAL
-            </div>
-
-
-            <!-- IMAGE 1 -->
-            <img
-                src="iqoo.jpg"
-                alt="iQOO Smartphone"
-                class="product-image"
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search product..."
             >
 
-
-            <h3>
-                iQOO Neo Smartphone
-            </h3>
-
-
-            <p>
-                12GB RAM | 256GB Storage |
-                AMOLED Display
-            </p>
-
-
-            <div class="rating">
-                ⭐⭐⭐⭐⭐ 4.7
-            </div>
-
-
-            <div class="best-price">
-                ₹34,999
-            </div>
-
-
-            <button
-                class="compare-btn"
-                onclick="compareProduct('iQOO Neo Smartphone')"
-            >
-                Compare Prices
+            <button onclick="searchProduct()">
+                🔍 Search
             </button>
 
         </div>
 
+    </section>
 
 
-        <!-- ================================================= -->
-        <!-- PRODUCT 2 -->
-        <!-- ================================================= -->
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
 
-        <div class="product-card">
+        <h2>
+            Popular Categories
+        </h2>
 
-            <div class="badge">
-                BEST DEAL
-            </div>
+        <div class="category-container">
 
+            <div class="category">📱 Mobiles</div>
 
-            <!-- IMAGE 2 -->
-            <img
-                src="samsung.jpg"
-                alt="Samsung Smartphone"
-                class="product-image"
-            >
+            <div class="category">💻 Laptops</div>
 
+            <div class="category">🎧 Electronics</div>
 
-            <h3>
-                Samsung Galaxy S25 Ultra
-            </h3>
+            <div class="category">⌚ Smart Watches</div>
 
+            <div class="category">📷 Cameras</div>
 
-            <p>
-                12GB RAM | 256GB Storage |
-                AMOLED Display
-            </p>
-
-
-            <div class="rating">
-                ⭐⭐⭐⭐⭐ 4.8
-            </div>
-
-
-            <div class="best-price">
-                ₹99,999
-            </div>
-
-
-            <button
-                class="compare-btn"
-                onclick="compareProduct('Samsung Galaxy S25 Ultra')"
-            >
-                Compare Prices
-            </button>
+            <div class="category">🏠 Home Appliances</div>
 
         </div>
 
+    </section>
 
 
-        <!-- ================================================= -->
-        <!-- PRODUCT 3 -->
-        <!-- ================================================= -->
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
 
-        <div class="product-card">
+        <h2>
+            Popular Products
+        </h2>
 
-            <!-- IMAGE 3 -->
-            <img
-                src="asus.jpg"
-                alt="ASUS VivoBook Laptop"
-                class="product-image"
-            >
+        <div class="product-grid">
 
 
-            <h3>
-                ASUS VivoBook Laptop
-            </h3>
+            <!-- iQOO -->
+            <div class="product-card">
 
+                <div class="badge">
+                    BEST DEAL
+                </div>
 
-            <p>
-                16GB RAM | 512GB SSD |
-                Full HD Display
-            </p>
+                <img
+                    src="iqoo.jpg"
+                    alt="iQOO Smartphone"
+                    class="product-image"
+                >
 
+                <h3>
+                    iQOO Neo Smartphone
+                </h3>
 
-            <div class="rating">
-                ⭐⭐⭐⭐☆ 4.5
+                <p>
+                    12GB RAM | 256GB Storage | AMOLED Display
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ 4.7
+                </div>
+
+                <div class="best-price">
+                    ₹34,999
+                </div>
+
+                <button
+                    class="compare-btn"
+                    onclick="compareProduct('iQOO Neo Smartphone')"
+                >
+                    Compare Prices
+                </button>
+
             </div>
 
 
-            <div class="best-price">
-                ₹39,999
+            <!-- SAMSUNG -->
+            <div class="product-card">
+
+                <div class="badge">
+                    BEST DEAL
+                </div>
+
+                <img
+                    src="samsung.jpg"
+                    alt="Samsung Smartphone"
+                    class="product-image"
+                >
+
+                <h3>
+                    Samsung Galaxy S25 Ultra
+                </h3>
+
+                <p>
+                    12GB RAM | 256GB Storage | AMOLED Display
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ 4.8
+                </div>
+
+                <div class="best-price">
+                    ₹99,999
+                </div>
+
+                <button
+                    class="compare-btn"
+                    onclick="compareProduct('Samsung Galaxy S25 Ultra')"
+                >
+                    Compare Prices
+                </button>
+
             </div>
 
 
-            <button
-                class="compare-btn"
-                onclick="compareProduct('ASUS VivoBook Laptop')"
-            >
-                Compare Prices
-            </button>
+            <!-- ASUS -->
+            <div class="product-card">
+
+                <img
+                    src="asus.jpg"
+                    alt="ASUS Laptop"
+                    class="product-image"
+                >
+
+                <h3>
+                    ASUS VivoBook Laptop
+                </h3>
+
+                <p>
+                    16GB RAM | 512GB SSD | Full HD Display
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ 4.5
+                </div>
+
+                <div class="best-price">
+                    ₹39,999
+                </div>
+
+                <button
+                    class="compare-btn"
+                    onclick="compareProduct('ASUS VivoBook Laptop')"
+                >
+                    Compare Prices
+                </button>
+
+            </div>
+
+
+            <!-- HEADPHONES -->
+            <div class="product-card">
+
+                <img
+                    src="headphones.jpg"
+                    alt="Wireless Headphones"
+                    class="product-image"
+                >
+
+                <h3>
+                    Wireless Headphones
+                </h3>
+
+                <p>
+                    Noise Cancellation | Bluetooth | 40 Hours Battery
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ 4.4
+                </div>
+
+                <div class="best-price">
+                    ₹2,999
+                </div>
+
+                <button
+                    class="compare-btn"
+                    onclick="compareProduct('Wireless Headphones')"
+                >
+                    Compare Prices
+                </button>
+
+            </div>
+
+
+            <!-- SMARTWATCH -->
+            <div class="product-card">
+
+                <img
+                    src="smartwatch.jpg"
+                    alt="Smart Watch"
+                    class="product-image"
+                >
+
+                <h3>
+                    Smart Watch
+                </h3>
+
+                <p>
+                    AMOLED | Heart Rate | Bluetooth Calling
+                </p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ 4.3
+                </div>
+
+                <div class="best-price">
+                    ₹1,999
+                </div>
+
+                <button
+                    class="compare-btn"
+                    onclick="compareProduct('Smart Watch')"
+                >
+                    Compare Prices
+                </button>
+
+            </div>
 
         </div>
 
+    </section>
 
 
-        <!-- ================================================= -->
-        <!-- PRODUCT 4 -->
-        <!-- ================================================= -->
+    <!-- PRICE COMPARISON -->
+    <section id="comparison">
 
-        <div class="product-card">
+        <h2>
+            Price Comparison
+        </h2>
 
-            <!-- IMAGE 4 -->
-            <img
-                src="headphones.jpg"
-                alt="Wireless Headphones"
-                class="product-image"
-            >
+        <div class="comparison-box">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Store</th>
+                        <th>Price</th>
+                        <th>Delivery</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Amazon</td>
+
+                        <td class="lowest">
+                            ₹34,999
+                        </td>
+
+                        <td>
+                            Free
+                        </td>
+
+                        <td>
+                            <button
+                                class="buy-btn"
+                                onclick="buyProduct()"
+                            >
+                                Buy Now
+                            </button>
+                        </td>
+
+                    </tr>
 
 
-            <h3>
-                Wireless Headphones
-            </h3>
+                    <tr>
+
+                        <td>Flipkart</td>
+
+                        <td>
+                            ₹35,499
+                        </td>
+
+                        <td>
+                            Free
+                        </td>
+
+                        <td>
+                            <button
+                                class="buy-btn"
+                                onclick="buyProduct()"
+                            >
+                                Buy Now
+                            </button>
+                        </td>
+
+                    </tr>
 
 
-            <p>
-                Noise Cancellation |
-                Bluetooth | 40 Hours Battery
-            </p>
+                    <tr>
 
+                        <td>Croma</td>
 
-            <div class="rating">
-                ⭐⭐⭐⭐☆ 4.4
-            </div>
+                        <td>
+                            ₹36,990
+                        </td>
 
+                        <td>
+                            ₹99
+                        </td>
 
-            <div class="best-price">
-                ₹2,999
-            </div>
+                        <td>
+                            <button
+                                class="buy-btn"
+                                onclick="buyProduct()"
+                            >
+                                Buy Now
+                            </button>
+                        </td>
 
+                    </tr>
 
-            <button
-                class="compare-btn"
-                onclick="compareProduct('Wireless Headphones')"
-            >
-                Compare Prices
-            </button>
+                </tbody>
+
+            </table>
 
         </div>
 
+    </section>
 
 
-        <!-- ================================================= -->
-        <!-- PRODUCT 5 -->
-        <!-- ================================================= -->
+    <!-- ABOUT -->
+    <section class="about" id="about">
 
-        <div class="product-card">
+        <h2>
+            About PriceCompare
+        </h2>
 
-            <!-- IMAGE 5 -->
-            <img
-                src="smartwatch.jpg"
-                alt="Smart Watch"
-                class="product-image"
-            >
+        <p>
+            PriceCompare helps users compare product
+            prices from different online stores in one place.
+            Our goal is to help users find the best deal
+            quickly and save money.
+        </p>
 
+    </section>
 
-            <h3>
-                Smart Watch
-            </h3>
 
+    <!-- FOOTER -->
+    <footer>
 
-            <p>
-                AMOLED | Heart Rate |
-                Bluetooth Calling
-            </p>
+        <p>
+            © 2026 PriceCompare. All Rights Reserved.
+        </p>
 
+    </footer>
 
-            <div class="rating">
-                ⭐⭐⭐⭐☆ 4.3
-            </div>
 
+    <!-- JAVASCRIPT -->
+    <script>
 
-            <div class="best-price">
-                ₹1,999
-            </div>
+        function searchProduct() {
 
+            let product =
+                document.getElementById("searchInput").value.trim();
 
-            <button
-                class="compare-btn"
-                onclick="compareProduct('Smart Watch')"
-            >
-                Compare Prices
-            </button>
+            if (product === "") {
 
-        </div>
+                alert("Please enter a product name.");
 
+                return;
+            }
 
-    </div>
-
-</section>
-
-
-
-<!-- ================================================= -->
-<!-- PRICE COMPARISON -->
-<!-- ================================================= -->
-
-<section id="comparison">
-
-    <h2>
-        Price Comparison
-    </h2>
-
-
-    <div class="comparison-box">
-
-        <table>
-
-            <thead>
-
-                <tr>
-
-                    <th>
-                        Store
-                    </th>
-
-                    <th>
-                        Price
-                    </th>
-
-                    <th>
-                        Delivery
-                    </th>
-
-                    <th>
-                        Action
-                    </th>
-
-                </tr>
-
-            </thead>
-
-
-            <tbody>
-
-                <tr>
-
-                    <td>
-                        Amazon
-                    </td>
-
-                    <td class="lowest">
-                        ₹34,999
-                    </td>
-
-                    <td>
-                        Free
-                    </td>
-
-                    <td>
-
-                        <button
-                            class="buy-btn"
-                            onclick="buyProduct()"
-                        >
-                            Buy Now
-                        </button>
-
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>
-                        Flipkart
-                    </td>
-
-                    <td>
-                        ₹35,499
-                    </td>
-
-                    <td>
-                        Free
-                    </td>
-
-                    <td>
-
-                        <button
-                            class="buy-btn"
-                            onclick="buyProduct()"
-                        >
-                            Buy Now
-                        </button>
-
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>
-                        Croma
-                    </td>
-
-                    <td>
-                        ₹36,990
-                    </td>
-
-                    <td>
-                        ₹99
-                    </td>
-
-                    <td>
-
-                        <button
-                            class="buy-btn"
-                            onclick="buyProduct()"
-                        >
-                            Buy Now
-                        </button>
-
-                    </td>
-
-                </tr>
-
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================================================= -->
-<!-- ABOUT -->
-<!-- ================================================= -->
-
-<section
-    class="about"
-    id="about"
->
-
-    <h2>
-        About PriceCompare
-    </h2>
-
-
-    <p>
-
-        PriceCompare helps users compare product
-        prices from different online stores in
-        one place.
-
-        Our goal is to help users find the best
-        deal quickly and save money.
-
-    </p>
-
-</section>
-
-
-
-<!-- ================================================= -->
-<!-- FOOTER -->
-<!-- ================================================= -->
-
-<footer>
-
-    <p>
-        © 2026 PriceCompare.
-        All Rights Reserved.
-    </p>
-
-</footer>
-
-
-
-<!-- ================================================= -->
-<!-- JAVASCRIPT -->
-<!-- ================================================= -->
-
-<script>
-
-
-    /* ================= SEARCH ================= */
-
-    function searchProduct() {
-
-        let product =
-            document
-            .getElementById("searchInput")
-            .value
-            .trim();
-
-
-        if (product === "") {
-
-            alert(
-                "Please enter a product name."
-            );
-
-            return;
+            alert("Searching prices for: " + product);
         }
 
 
-        alert(
-            "Searching prices for: "
-            + product
-        );
+        function compareProduct(product) {
 
-    }
+            document.getElementById("comparison").style.display = "block";
 
-
-
-    /* ================= COMPARE ================= */
-
-    function compareProduct(product) {
-
-        document
-        .getElementById("comparison")
-        .style.display = "block";
+            document.getElementById("comparison").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
 
 
-        document
-        .getElementById("comparison")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+        function buyProduct() {
 
-    }
+            alert("Buy link will be connected later.");
 
+        }
 
-
-    /* ================= BUY ================= */
-
-    function buyProduct() {
-
-        alert(
-            "Buy link will be connected later."
-        );
-
-    }
-
-
-</script>
-
+    </script>
 
 </body>
 
