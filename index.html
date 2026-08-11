@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>PriceCompare - Best Price Finder</title>
+
 
     <style>
 
@@ -25,11 +29,13 @@
             color: #222;
         }
 
+
         /* ================= HEADER ================= */
 
         header {
             background: #172554;
             color: white;
+
             padding: 18px 7%;
 
             display: flex;
@@ -49,7 +55,9 @@
         nav a {
             color: white;
             text-decoration: none;
+
             margin-left: 25px;
+
             font-size: 15px;
         }
 
@@ -61,7 +69,12 @@
         /* ================= HERO ================= */
 
         .hero {
-            background: linear-gradient(135deg, #172554, #2563eb);
+            background:
+                linear-gradient(
+                    135deg,
+                    #172554,
+                    #2563eb
+                );
 
             color: white;
 
@@ -72,11 +85,13 @@
 
         .hero h1 {
             font-size: 44px;
+
             margin-bottom: 15px;
         }
 
         .hero p {
             font-size: 18px;
+
             margin-bottom: 30px;
         }
 
@@ -85,6 +100,7 @@
 
         .search-box {
             max-width: 700px;
+
             margin: auto;
 
             background: white;
@@ -100,6 +116,7 @@
             flex: 1;
 
             border: none;
+
             outline: none;
 
             padding: 18px;
@@ -126,10 +143,34 @@
         }
 
 
+        /* ================= SEARCH RESULT ================= */
+
+        #searchResult {
+            display: none;
+
+            padding: 30px 7%;
+
+            background: #eef2ff;
+
+            text-align: center;
+        }
+
+        #searchResult h2 {
+            color: #172554;
+
+            margin-bottom: 10px;
+        }
+
+        #searchResult p {
+            color: #666;
+        }
+
+
         /* ================= CATEGORIES ================= */
 
         .categories {
             padding: 45px 7%;
+
             text-align: center;
         }
 
@@ -154,7 +195,9 @@
 
             border-radius: 10px;
 
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            box-shadow:
+                0 3px 10px
+                rgba(0,0,0,0.08);
 
             cursor: pointer;
 
@@ -180,7 +223,10 @@
             display: grid;
 
             grid-template-columns:
-            repeat(auto-fit, minmax(260px, 1fr));
+                repeat(
+                    auto-fit,
+                    minmax(260px, 1fr)
+                );
 
             gap: 25px;
         }
@@ -196,7 +242,8 @@
             padding: 20px;
 
             box-shadow:
-            0 4px 15px rgba(0,0,0,0.08);
+                0 4px 15px
+                rgba(0,0,0,0.08);
 
             transition: 0.3s;
 
@@ -207,7 +254,8 @@
             transform: translateY(-6px);
 
             box-shadow:
-            0 8px 25px rgba(0,0,0,0.12);
+                0 8px 25px
+                rgba(0,0,0,0.12);
         }
 
 
@@ -230,6 +278,7 @@
             position: absolute;
 
             top: 15px;
+
             left: 15px;
 
             background: #16a34a;
@@ -383,6 +432,9 @@
             margin-left: 5px;
         }
 
+
+        /* ================= BUY BUTTON ================= */
+
         .buy-btn {
             background: #f97316;
 
@@ -475,7 +527,7 @@
 
         /* ================= MOBILE ================= */
 
-        @media(max-width: 600px) {
+        @media(max-width:600px) {
 
             header {
                 flex-direction: column;
@@ -512,6 +564,7 @@
     </style>
 
 </head>
+
 
 
 <body>
@@ -558,8 +611,10 @@
     </h1>
 
     <p>
-        Compare prices from different stores and find the best deal.
+        Compare prices from different stores
+        and find the best deal.
     </p>
+
 
     <div class="search-box">
 
@@ -567,6 +622,7 @@
             type="text"
             id="searchInput"
             placeholder="Search for a product..."
+            onkeydown="handleSearchKey(event)"
         >
 
         <button onclick="searchProduct()">
@@ -574,6 +630,22 @@
         </button>
 
     </div>
+
+</section>
+
+
+
+<!-- ================= SEARCH RESULT ================= -->
+
+<section id="searchResult">
+
+    <h2 id="searchResultTitle">
+        Product Found
+    </h2>
+
+    <p id="searchResultText">
+        Showing price comparison
+    </p>
 
 </section>
 
@@ -589,6 +661,7 @@
     <h2>
         Popular Categories
     </h2>
+
 
     <div class="category-container">
 
@@ -633,6 +706,7 @@
         Popular Products
     </h2>
 
+
     <div class="product-grid">
 
 
@@ -663,7 +737,10 @@
                 ⭐⭐⭐⭐⭐ 4.7
             </div>
 
-            <div class="best-price">
+            <div
+                class="best-price"
+                id="cardPrice-iqoo"
+            >
                 From ₹34,999
             </div>
 
@@ -705,7 +782,10 @@
                 ⭐⭐⭐⭐⭐ 4.8
             </div>
 
-            <div class="best-price">
+            <div
+                class="best-price"
+                id="cardPrice-samsung"
+            >
                 From ₹99,999
             </div>
 
@@ -743,7 +823,10 @@
                 ⭐⭐⭐⭐☆ 4.5
             </div>
 
-            <div class="best-price">
+            <div
+                class="best-price"
+                id="cardPrice-asus"
+            >
                 From ₹39,999
             </div>
 
@@ -781,7 +864,10 @@
                 ⭐⭐⭐⭐☆ 4.4
             </div>
 
-            <div class="best-price">
+            <div
+                class="best-price"
+                id="cardPrice-headphones"
+            >
                 From ₹2,999
             </div>
 
@@ -796,7 +882,7 @@
 
 
 
-        <!-- ================= SMARTWATCH ================= -->
+        <!-- ================= SMART WATCH ================= -->
 
         <div class="product-card">
 
@@ -819,7 +905,10 @@
                 ⭐⭐⭐⭐☆ 4.3
             </div>
 
-            <div class="best-price">
+            <div
+                class="best-price"
+                id="cardPrice-watch"
+            >
                 From ₹1,999
             </div>
 
@@ -847,8 +936,10 @@
     </h2>
 
     <p class="comparison-subtitle">
-        Compare prices from different stores and find the lowest price.
+        Compare prices from different stores
+        and find the lowest price.
     </p>
+
 
     <div class="comparison-box">
 
@@ -878,6 +969,7 @@
 
             </thead>
 
+
             <tbody id="comparisonTable">
 
             </tbody>
@@ -898,11 +990,13 @@
             🏆 Lowest Price
         </h3>
 
+
         <div
             class="best-deal-price"
             id="bestDealPrice"
         >
         </div>
+
 
         <div
             class="best-deal-store"
@@ -928,10 +1022,14 @@
     </h2>
 
     <p>
-        PriceCompare helps users compare product prices
-        from different online stores in one place.
-        Select a product and compare prices to find
-        the best available deal.
+
+        PriceCompare helps users compare
+        product prices from different online
+        stores in one place.
+
+        Search for a product or select a product
+        and compare prices to find the best deal.
+
     </p>
 
 </section>
@@ -943,7 +1041,8 @@
 <footer>
 
     <p>
-        © 2026 PriceCompare. All Rights Reserved.
+        © 2026 PriceCompare.
+        All Rights Reserved.
     </p>
 
 </footer>
@@ -955,12 +1054,9 @@
 <script>
 
 
-/*
-    PRODUCT PRICE DATABASE
-
-    These are demo prices for your project.
-    Later we can connect this to a real API/backend.
-*/
+/* ==================================================
+   PRODUCT DATABASE
+   ================================================== */
 
 
 const products = {
@@ -969,6 +1065,8 @@ const products = {
     /* ================= IQOO ================= */
 
     "iQOO Neo Smartphone": {
+
+        image: "iqoo.jpg",
 
         prices: [
 
@@ -999,6 +1097,8 @@ const products = {
 
     "Samsung Galaxy S25 Ultra": {
 
+        image: "samsung.jpg",
+
         prices: [
 
             {
@@ -1027,6 +1127,8 @@ const products = {
     /* ================= ASUS ================= */
 
     "ASUS VivoBook Laptop": {
+
+        image: "asus.jpg",
 
         prices: [
 
@@ -1057,6 +1159,8 @@ const products = {
 
     "Wireless Headphones": {
 
+        image: "headphones.jpg",
+
         prices: [
 
             {
@@ -1082,9 +1186,11 @@ const products = {
     },
 
 
-    /* ================= SMARTWATCH ================= */
+    /* ================= SMART WATCH ================= */
 
     "Smart Watch": {
+
+        image: "smartwatch.jpg",
 
         prices: [
 
@@ -1114,17 +1220,23 @@ const products = {
 
 
 
-/* ================= COMPARE PRODUCT ================= */
+/* ==================================================
+   COMPARE PRODUCT
+   ================================================== */
+
 
 function compareProduct(productName) {
 
 
-    const product = products[productName];
+    const product =
+        products[productName];
 
 
     if (!product) {
 
-        alert("Product information not available.");
+        alert(
+            "Product information not available."
+        );
 
         return;
 
@@ -1133,22 +1245,24 @@ function compareProduct(productName) {
 
     /* Find lowest price */
 
-    let lowestPrice = Math.min(
-        ...product.prices.map(
-            item => item.price
-        )
-    );
+    const lowestPrice =
+        Math.min(
+            ...product.prices.map(
+                item => item.price
+            )
+        );
 
 
     /* Find store with lowest price */
 
-    let lowestStore =
+    const lowestStore =
         product.prices.find(
-            item => item.price === lowestPrice
+            item =>
+                item.price === lowestPrice
         );
 
 
-    /* Change heading */
+    /* Update title */
 
     document.getElementById(
         "comparisonTitle"
@@ -1165,12 +1279,12 @@ function compareProduct(productName) {
         );
 
 
-    /* Clear old table */
+    /* Clear previous data */
 
     table.innerHTML = "";
 
 
-    /* Add every store */
+    /* Create rows */
 
     product.prices.forEach(
         function(item) {
@@ -1181,7 +1295,9 @@ function compareProduct(productName) {
 
 
             const row =
-                document.createElement("tr");
+                document.createElement(
+                    "tr"
+                );
 
 
             if (isLowest) {
@@ -1195,28 +1311,40 @@ function compareProduct(productName) {
             row.innerHTML = `
 
                 <td>
+
                     <strong>
                         ${item.store}
                     </strong>
+
                 </td>
 
 
                 <td>
 
                     <span
-                        class="${isLowest ? 'lowest-price' : ''}"
+                        class="${
+                            isLowest
+                            ? "lowest-price"
+                            : ""
+                        }"
                     >
 
-                        ₹${item.price.toLocaleString('en-IN')}
+                        ₹${item.price.toLocaleString(
+                            "en-IN"
+                        )}
 
                     </span>
 
 
                     ${
                         isLowest
+
                         ?
+
                         '<span class="lowest-label">LOWEST</span>'
+
                         :
+
                         ''
                     }
 
@@ -1232,7 +1360,10 @@ function compareProduct(productName) {
 
                     <button
                         class="buy-btn"
-                        onclick="buyProduct('${item.store}', '${productName}')"
+                        onclick="buyProduct(
+                            '${item.store}',
+                            '${productName}'
+                        )"
                     >
 
                         Buy Now
@@ -1250,11 +1381,12 @@ function compareProduct(productName) {
     );
 
 
-    /* Show best price */
+    /* Update best deal */
 
     document.getElementById(
         "bestDealPrice"
     ).innerHTML =
+
         "₹" +
         lowestPrice.toLocaleString(
             "en-IN"
@@ -1264,52 +1396,37 @@ function compareProduct(productName) {
     document.getElementById(
         "bestDealStore"
     ).innerHTML =
-        "Best price available at <strong>"
-        +
-        lowestStore.store
-        +
+
+        "Best price available at <strong>" +
+        lowestStore.store +
         "</strong>";
 
 
-    /* Show comparison section */
+    /* Show comparison */
 
     document.getElementById(
         "comparison"
     ).style.display = "block";
 
 
-    /* Scroll to comparison */
+    /* Scroll */
 
     document.getElementById(
         "comparison"
     ).scrollIntoView({
+
         behavior: "smooth"
+
     });
 
 }
 
 
 
-/* ================= BUY BUTTON ================= */
+/* ==================================================
+   SEARCH PRODUCT
+   ================================================== */
 
-function buyProduct(
-    store,
-    product
-) {
-
-    alert(
-        "Buy " +
-        product +
-        " from " +
-        store +
-        "."
-    );
-
-}
-
-
-
-/* ================= SEARCH ================= */
 
 function searchProduct() {
 
@@ -1335,31 +1452,205 @@ function searchProduct() {
     }
 
 
-    /* Find matching product */
+    /*
+       Search using product name,
+       keywords and common names
+    */
 
-    const productName =
-        Object.keys(products).find(
-            name =>
-                name.toLowerCase()
-                .includes(searchText)
-        );
 
+    let productName = null;
+
+
+    const searchKeywords = {
+
+        "iqoo":
+            "iQOO Neo Smartphone",
+
+        "neo":
+            "iQOO Neo Smartphone",
+
+        "samsung":
+            "Samsung Galaxy S25 Ultra",
+
+        "s25":
+            "Samsung Galaxy S25 Ultra",
+
+        "ultra":
+            "Samsung Galaxy S25 Ultra",
+
+        "asus":
+            "ASUS VivoBook Laptop",
+
+        "vivobook":
+            "ASUS VivoBook Laptop",
+
+        "laptop":
+            "ASUS VivoBook Laptop",
+
+        "headphone":
+            "Wireless Headphones",
+
+        "headphones":
+            "Wireless Headphones",
+
+        "wireless":
+            "Wireless Headphones",
+
+        "watch":
+            "Smart Watch",
+
+        "smartwatch":
+            "Smart Watch"
+
+    };
+
+
+    /* Check keywords */
+
+    for (
+        const keyword
+        in searchKeywords
+    ) {
+
+        if (
+            searchText.includes(
+                keyword
+            )
+        ) {
+
+            productName =
+                searchKeywords[
+                    keyword
+                ];
+
+            break;
+
+        }
+
+    }
+
+
+    /* If keyword not found,
+       search product names
+    */
+
+    if (!productName) {
+
+        productName =
+            Object.keys(products).find(
+                function(name) {
+
+                    return name
+                        .toLowerCase()
+                        .includes(searchText);
+
+                }
+            );
+
+    }
+
+
+    /* Product found */
 
     if (productName) {
+
+
+        document.getElementById(
+            "searchResult"
+        ).style.display = "block";
+
+
+        document.getElementById(
+            "searchResultTitle"
+        ).innerHTML =
+            "🔍 Product Found";
+
+
+        document.getElementById(
+            "searchResultText"
+        ).innerHTML =
+            "Showing price comparison for <strong>" +
+            productName +
+            "</strong>";
+
 
         compareProduct(
             productName
         );
 
+
     }
 
     else {
 
-        alert(
-            "Product not found. Try iQOO, Samsung, ASUS, Headphones or Smart Watch."
-        );
+
+        document.getElementById(
+            "searchResult"
+        ).style.display = "block";
+
+
+        document.getElementById(
+            "searchResultTitle"
+        ).innerHTML =
+            "❌ Product Not Found";
+
+
+        document.getElementById(
+            "searchResultText"
+        ).innerHTML =
+            "Try searching: iQOO, Samsung, ASUS, Headphones or Smart Watch.";
+
+
+        document.getElementById(
+            "comparison"
+        ).style.display = "none";
 
     }
+
+}
+
+
+
+/* ==================================================
+   ENTER KEY SEARCH
+   ================================================== */
+
+
+function handleSearchKey(event) {
+
+
+    if (
+        event.key === "Enter"
+    ) {
+
+        searchProduct();
+
+    }
+
+}
+
+
+
+/* ==================================================
+   BUY PRODUCT
+   ================================================== */
+
+
+function buyProduct(
+    store,
+    product
+) {
+
+
+    alert(
+
+        "Buy " +
+        product +
+        " from " +
+        store +
+        "."
+
+    );
 
 }
 
