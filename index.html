@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PriceCompare - Find the Best Price</title>
+<title>PriceCompare - Compare Prices</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 html{
@@ -19,9 +21,10 @@ html{
 }
 
 body{
-    background:#f4f6fb;
+    background:#f5f7fb;
     color:#172033;
 }
+
 
 /* ================= HEADER ================= */
 
@@ -49,20 +52,20 @@ header{
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:30px;
-    font-size:16px;
+    margin-left:25px;
 }
 
 nav a:hover{
     color:#ffd180;
 }
 
-/* ================= HOME ================= */
+
+/* ================= HERO ================= */
 
 .hero{
-    max-width:1230px;
+    max-width:1200px;
     margin:45px auto;
-    padding:65px 25px;
+    padding:70px 20px;
     text-align:center;
     color:white;
 
@@ -72,11 +75,11 @@ nav a:hover{
         #1555bd
     );
 
-    border-radius:15px;
+    border-radius:16px;
 }
 
 .hero h1{
-    font-size:38px;
+    font-size:42px;
     margin-bottom:15px;
 }
 
@@ -85,32 +88,46 @@ nav a:hover{
     margin-bottom:30px;
 }
 
+
 /* ================= SEARCH ================= */
 
 .search-box{
-    max-width:560px;
+    max-width:650px;
     margin:auto;
+
     display:flex;
+
     background:white;
-    border-radius:9px;
+
+    border-radius:10px;
+
     overflow:hidden;
 }
 
 .search-box input{
     flex:1;
-    border:0;
+
+    border:none;
     outline:none;
-    padding:17px;
+
+    padding:18px;
+
     font-size:16px;
 }
 
 .search-box button{
-    border:0;
+    border:none;
+
     background:#ff9800;
+
     color:white;
-    padding:0 28px;
+
+    padding:0 30px;
+
     font-size:16px;
+
     font-weight:bold;
+
     cursor:pointer;
 }
 
@@ -118,24 +135,27 @@ nav a:hover{
     background:#f57c00;
 }
 
+
 /* ================= QUICK SEARCH ================= */
 
 .quick{
     margin-top:25px;
 }
 
-.quick span{
-    margin-right:8px;
-}
-
 .quick button{
-    border:0;
+    border:none;
+
     background:white;
-    padding:9px 16px;
-    border-radius:20px;
-    margin:5px;
-    cursor:pointer;
+
     color:#333;
+
+    padding:9px 15px;
+
+    border-radius:20px;
+
+    margin:5px;
+
+    cursor:pointer;
 }
 
 .quick button:hover{
@@ -143,86 +163,82 @@ nav a:hover{
     color:white;
 }
 
+
 /* ================= FEATURES ================= */
 
 .features{
-    max-width:1230px;
-    margin:35px auto 60px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    max-width:1200px;
+
+    margin:40px auto 70px;
+
     padding:0 20px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
 }
 
 .feature{
     background:white;
+
     padding:30px 20px;
+
     text-align:center;
+
     border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .feature-icon{
-    font-size:35px;
+    font-size:38px;
+
     margin-bottom:15px;
 }
 
 .feature h3{
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .feature p{
     color:#666;
+
     line-height:1.6;
 }
+
 
 /* ================= COMPARISON ================= */
 
 #comparison{
-    max-width:1230px;
-    margin:0 auto 60px;
-    padding:0 20px;
     display:none;
-}
 
-.compare-search{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-    display:flex;
-    gap:12px;
-    margin-bottom:25px;
-}
+    max-width:1200px;
 
-.compare-search input{
-    flex:1;
-    padding:15px;
-    border:1px solid #ccc;
-    border-radius:7px;
-    font-size:16px;
-}
+    margin:0 auto 70px;
 
-.compare-search button{
-    border:0;
-    background:#ff9800;
-    color:white;
-    font-weight:bold;
-    padding:0 30px;
-    border-radius:7px;
-    cursor:pointer;
+    padding:0 20px;
 }
 
 .product-heading{
     background:white;
+
     padding:30px;
+
     border-radius:12px;
+
     margin-bottom:20px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .product-heading h2{
     font-size:28px;
+
     margin-bottom:10px;
 }
 
@@ -230,79 +246,112 @@ nav a:hover{
     color:#666;
 }
 
-/* ================= SAVING MESSAGE ================= */
+
+/* ================= SAVING ================= */
 
 .saving{
-    background:#e8f7ea;
-    border-left:4px solid #26943d;
-    padding:15px 20px;
-    border-radius:6px;
-    margin-bottom:22px;
-    color:#16812c;
+    background:#eaf8ed;
+
+    border-left:5px solid #16a34a;
+
+    padding:16px 20px;
+
+    border-radius:7px;
+
+    margin-bottom:20px;
+
+    color:#15803d;
+
     font-weight:bold;
 }
 
+
 /* ================= TABLE ================= */
 
-.table-container{
+.table-box{
     background:white;
+
     border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    overflow-x:auto;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 table{
     width:100%;
+
+    min-width:750px;
+
     border-collapse:collapse;
 }
 
 th{
     background:#2878e8;
+
     color:white;
-    padding:20px;
+
+    padding:18px;
+
     text-align:left;
-    font-size:16px;
 }
 
 td{
-    padding:20px;
+    padding:18px;
+
     border-bottom:1px solid #eee;
-    font-size:16px;
 }
 
 tr:last-child td{
     border-bottom:none;
 }
 
-.lowest{
-    background:#f0fff2;
-}
-
-.lowest td{
-    font-weight:bold;
+.lowest-row{
+    background:#ecfdf5;
 }
 
 .lowest-price{
-    color:#16812c;
+    color:#15803d;
+
     font-size:21px;
+
+    font-weight:bold;
 }
 
 .lowest-label{
-    color:#16812c;
+    display:inline-block;
+
     margin-left:8px;
+
+    color:white;
+
+    background:#16a34a;
+
+    padding:5px 8px;
+
+    border-radius:5px;
+
+    font-size:11px;
 }
 
 .rating{
-    color:#ff9800;
+    color:#f59e0b;
 }
 
 .view-btn{
     background:#ff9800;
-    border:0;
+
     color:white;
-    padding:10px 22px;
-    border-radius:7px;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:6px;
+
     cursor:pointer;
+
     font-weight:bold;
 }
 
@@ -310,24 +359,34 @@ tr:last-child td{
     background:#f57c00;
 }
 
-/* ================= RESULT MESSAGE ================= */
 
-.not-found{
+/* ================= NOT FOUND ================= */
+
+.error-box{
     background:white;
-    padding:40px;
-    text-align:center;
+
+    padding:35px;
+
     border-radius:12px;
+
+    text-align:center;
+
     color:#555;
 }
+
 
 /* ================= FOOTER ================= */
 
 footer{
     background:#172033;
+
     color:white;
+
     text-align:center;
+
     padding:30px;
 }
+
 
 /* ================= MOBILE ================= */
 
@@ -348,11 +407,12 @@ footer{
 
     .hero{
         margin:20px 12px;
+
         padding:45px 15px;
     }
 
     .hero h1{
-        font-size:29px;
+        font-size:30px;
     }
 
     .hero p{
@@ -369,29 +429,17 @@ footer{
 
     .features{
         grid-template-columns:1fr;
-        margin:25px 0;
     }
 
-    .compare-search{
-        flex-direction:column;
-    }
-
-    .compare-search button{
-        padding:15px;
-    }
-
-    .table-container{
-        overflow-x:auto;
-    }
-
-    table{
-        min-width:700px;
-    }
 }
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- ================= HEADER ================= -->
 
@@ -402,35 +450,50 @@ footer{
     </div>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#comparison">Compare</a>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#comparison">
+            Compare
+        </a>
+
     </nav>
 
 </header>
 
 
+
 <!-- ================= HOME ================= -->
 
-<main id="home">
+<section
+    class="hero"
+    id="home"
+>
 
-<section class="hero">
-
-    <h1>Find the Best Price, Every Time</h1>
+    <h1>
+        Find the Best Price, Every Time
+    </h1>
 
     <p>
-        Search any product and compare prices across multiple shopping platforms.
+        Search any product and compare prices
+        from different shopping websites.
     </p>
+
 
     <div class="search-box">
 
         <input
             type="text"
-            id="homeSearch"
+            id="searchInput"
             placeholder="Search any product..."
-            onkeydown="if(event.key==='Enter') searchProduct()"
+            onkeydown="handleEnter(event)"
         >
 
-        <button onclick="searchProduct()">
+        <button
+            onclick="searchProduct()"
+        >
             Compare Now
         </button>
 
@@ -439,112 +502,126 @@ footer{
 
     <div class="quick">
 
-        <span>Try:</span>
+        <span>
+            Try:
+        </span>
 
-        <button onclick="quickSearch('Samsung S25 Ultra')">
-            Smartphone
+        <button
+            onclick="quickSearch('Samsung S25 Ultra')"
+        >
+            📱 Samsung
         </button>
 
-        <button onclick="quickSearch('ASUS VivoBook')">
-            Laptop
+        <button
+            onclick="quickSearch('iPhone 16')"
+        >
+            📱 iPhone
         </button>
 
-        <button onclick="quickSearch('Wireless Headphones')">
-            Headphones
+        <button
+            onclick="quickSearch('Laptop')"
+        >
+            💻 Laptop
         </button>
 
-        <button onclick="quickSearch('Smartwatch')">
-            Smartwatch
+        <button
+            onclick="quickSearch('Headphones')"
+        >
+            🎧 Headphones
         </button>
 
-        <button onclick="quickSearch('Nike Shoes')">
-            Shoes
+        <button
+            onclick="quickSearch('Smart Watch')"
+        >
+            ⌚ Smart Watch
         </button>
 
     </div>
 
 </section>
+
 
 
 <!-- ================= FEATURES ================= -->
 
 <section class="features">
 
+
     <div class="feature">
 
-        <div class="feature-icon">🔍</div>
+        <div class="feature-icon">
+            🔍
+        </div>
 
-        <h3>Search Any Product</h3>
+        <h3>
+            Search Any Product
+        </h3>
 
         <p>
-            Enter a product name and compare prices
-            from multiple shopping platforms.
+            Search for mobiles, laptops,
+            electronics, watches, shoes
+            and other products.
         </p>
 
     </div>
 
 
+
     <div class="feature">
 
-        <div class="feature-icon">💰</div>
+        <div class="feature-icon">
+            💰
+        </div>
 
-        <h3>Spot the Best Deal</h3>
+        <h3>
+            Compare Prices
+        </h3>
 
         <p>
-            The lowest price is automatically highlighted
-            so you can save money.
+            Compare prices from multiple
+            shopping platforms in one place.
         </p>
 
     </div>
 
 
+
     <div class="feature">
 
-        <div class="feature-icon">🔗</div>
+        <div class="feature-icon">
+            🏆
+        </div>
 
-        <h3>Buy Directly</h3>
+        <h3>
+            Find Cheapest Price
+        </h3>
 
         <p>
-            Click View to visit the selected shopping
-            website.
+            The lowest price is automatically
+            highlighted for you.
         </p>
 
     </div>
+
 
 </section>
 
-</main>
 
 
 <!-- ================= COMPARISON ================= -->
 
 <section id="comparison">
 
-    <div class="compare-search">
-
-        <input
-            type="text"
-            id="compareSearch"
-            placeholder="Search another product..."
-            onkeydown="if(event.key==='Enter') searchFromCompare()"
-        >
-
-        <button onclick="searchFromCompare()">
-            Compare
-        </button>
-
-    </div>
-
 
     <div class="product-heading">
 
         <h2 id="productTitle">
-            Product
+            Product Comparison
         </h2>
 
         <p>
-            Prices collected from different shopping platforms
-            for this comparison.
+            Compare prices from different
+            shopping websites.
         </p>
 
     </div>
@@ -557,7 +634,7 @@ footer{
     </div>
 
 
-    <div class="table-container">
+    <div class="table-box">
 
         <table>
 
@@ -565,21 +642,34 @@ footer{
 
                 <tr>
 
-                    <th>Website</th>
+                    <th>
+                        Website
+                    </th>
 
-                    <th>Rating</th>
+                    <th>
+                        Rating
+                    </th>
 
-                    <th>Price</th>
+                    <th>
+                        Price
+                    </th>
 
-                    <th>Status</th>
+                    <th>
+                        Delivery
+                    </th>
 
-                    <th>Action</th>
+                    <th>
+                        Action
+                    </th>
 
                 </tr>
 
             </thead>
 
-            <tbody id="priceTable">
+
+            <tbody
+                id="priceTable"
+            >
             </tbody>
 
         </table>
@@ -589,272 +679,21 @@ footer{
 </section>
 
 
+
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
     <p>
-        © 2026 PriceCompare | Compare Prices & Save Money
+        © 2026 PriceCompare.
+        Compare Prices & Save Money.
     </p>
 
 </footer>
 
 
+
 <script>
-
-/* =====================================================
-   PRODUCT DATABASE
-   =====================================================
-
-   Demo data for your college project.
-
-   Later this can be connected to a real API/backend
-   to fetch live prices.
-*/
-
-
-const products = {
-
-    "samsung s25 ultra": {
-
-        name:"Samsung S25 Ultra",
-
-        prices:[
-            {
-                store:"Amazon",
-                rating:"4.2",
-                price:99999,
-                status:"Available",
-                url:"https://www.amazon.in/"
-            },
-
-            {
-                store:"Flipkart",
-                rating:"4.3",
-                price:99299,
-                status:"Available",
-                url:"https://www.flipkart.com/"
-            },
-
-            {
-                store:"Snapdeal",
-                rating:"3.9",
-                price:100499,
-                status:"Available",
-                url:"https://www.snapdeal.com/"
-            },
-
-            {
-                store:"Croma",
-                rating:"4.1",
-                price:101990,
-                status:"Available",
-                url:"https://www.croma.com/"
-            }
-        ]
-    },
-
-
-    "iphone 16": {
-
-        name:"iPhone 16",
-
-        prices:[
-            {
-                store:"Amazon",
-                rating:"4.4",
-                price:69999,
-                status:"Available",
-                url:"https://www.amazon.in/"
-            },
-
-            {
-                store:"Flipkart",
-                rating:"4.5",
-                price:67999,
-                status:"Available",
-                url:"https://www.flipkart.com/"
-            },
-
-            {
-                store:"Croma",
-                rating:"4.3",
-                price:70990,
-                status:"Available",
-                url:"https://www.croma.com/"
-            },
-
-            {
-                store:"Reliance Digital",
-                rating:"4.2",
-                price:71999,
-                status:"Available",
-                url:"https://www.reliancedigital.in/"
-            }
-        ]
-    },
-
-
-    "smartwatch": {
-
-        name:"Smartwatch",
-
-        prices:[
-            {
-                store:"Amazon",
-                rating:"4.2",
-                price:1999,
-                status:"Available",
-                url:"https://www.amazon.in/"
-            },
-
-            {
-                store:"Flipkart",
-                rating:"4.3",
-                price:1849,
-                status:"Available",
-                url:"https://www.flipkart.com/"
-            },
-
-            {
-                store:"Snapdeal",
-                rating:"3.9",
-                price:2199,
-                status:"Available",
-                url:"https://www.snapdeal.com/"
-            },
-
-            {
-                store:"Meesho",
-                rating:"4.0",
-                price:1749,
-                status:"Available",
-                url:"https://www.meesho.com/"
-            }
-        ]
-    },
-
-
-    "asus vivobook": {
-
-        name:"ASUS VivoBook",
-
-        prices:[
-            {
-                store:"Amazon",
-                rating:"4.3",
-                price:39999,
-                status:"Available",
-                url:"https://www.amazon.in/"
-            },
-
-            {
-                store:"Flipkart",
-                rating:"4.4",
-                price:38999,
-                status:"Available",
-                url:"https://www.flipkart.com/"
-            },
-
-            {
-                store:"Croma",
-                rating:"4.2",
-                price:40990,
-                status:"Available",
-                url:"https://www.croma.com/"
-            },
-
-            {
-                store:"Reliance Digital",
-                rating:"4.1",
-                price:41999,
-                status:"Available",
-                url:"https://www.reliancedigital.in/"
-            }
-        ]
-    },
-
-
-    "wireless headphones": {
-
-        name:"Wireless Headphones",
-
-        prices:[
-            {
-                store:"Amazon",
-                rating:"4.4",
-                price:2999,
-                status:"Available",
-                url:"https://www.amazon.in/"
-            },
-
-            {
-                store:"Flipkart",
-                rating:"4.3",
-                price:2799,
-                status:"Available",
-                url:"https://www.flipkart.com/"
-            },
-
-            {
-                store:"Croma",
-                rating:"4.2",
-                price:3199,
-                status:"Available",
-                url:"https://www.croma.com/"
-            },
-
-            {
-                store:"Meesho",
-                rating:"4.0",
-                price:2599,
-                status:"Available",
-                url:"https://www.meesho.com/"
-            }
-        ]
-    },
-
-
-    "nike shoes": {
-
-        name:"Nike Shoes",
-
-        prices:[
-            {
-                store:"Amazon",
-                rating:"4.3",
-                price:4999,
-                status:"Available",
-                url:"https://www.amazon.in/"
-            },
-
-            {
-                store:"Flipkart",
-                rating:"4.4",
-                price:4599,
-                status:"Available",
-                url:"https://www.flipkart.com/"
-            },
-
-            {
-                store:"Myntra",
-                rating:"4.5",
-                price:4399,
-                status:"Available",
-                url:"https://www.myntra.com/"
-            },
-
-            {
-                store:"Ajio",
-                rating:"4.2",
-                price:4699,
-                status:"Available",
-                url:"https://www.ajio.com/"
-            }
-        ]
-    }
-
-};
 
 
 /* =====================================================
@@ -864,124 +703,232 @@ const products = {
 function searchProduct(){
 
     const input =
-        document.getElementById("homeSearch");
+        document.getElementById(
+            "searchInput"
+        );
 
-    const text =
-        input.value.trim().toLowerCase();
+    const productName =
+        input.value.trim();
 
-    if(text === ""){
 
-        alert("Please enter a product name.");
+    if(productName === ""){
+
+        alert(
+            "Please enter a product name."
+        );
 
         return;
+
     }
 
-    findProduct(text);
+
+    generateComparison(
+        productName
+    );
+
 }
+
 
 
 /* =====================================================
    QUICK SEARCH
    ===================================================== */
 
-function quickSearch(product){
+function quickSearch(name){
 
-    document.getElementById("homeSearch").value = product;
+    document.getElementById(
+        "searchInput"
+    ).value = name;
 
-    findProduct(product.toLowerCase());
+
+    generateComparison(
+        name
+    );
+
 }
 
 
+
 /* =====================================================
-   SEARCH FROM COMPARISON PAGE
+   ENTER KEY
    ===================================================== */
 
-function searchFromCompare(){
+function handleEnter(event){
 
-    const text =
-        document.getElementById("compareSearch")
-        .value
-        .trim()
-        .toLowerCase();
+    if(event.key === "Enter"){
 
-    if(text === ""){
+        searchProduct();
 
-        alert("Please enter a product name.");
-
-        return;
     }
 
-    findProduct(text);
 }
 
 
+
 /* =====================================================
-   FIND PRODUCT
+   GENERATE PRICE
+   =====================================================
+
+   This creates demo prices for ANY product.
+
+   Example:
+
+   iPhone 17
+   Samsung S25
+   HP Laptop
+   Sony TV
+   Keyboard
+   Mouse
+   Camera
+
+   Everything will get a comparison.
    ===================================================== */
 
-function findProduct(searchText){
 
-    let foundKey = null;
+function generateComparison(
+    productName
+){
+
+    /*
+       Create a consistent number from
+       the product name.
+
+       This means the same product will
+       get the same prices every time.
+    */
+
+    let number = 0;
 
 
-    /* Exact match */
+    for(
+        let i = 0;
+        i < productName.length;
+        i++
+    ){
 
-    if(products[searchText]){
-
-        foundKey = searchText;
+        number +=
+            productName.charCodeAt(i)
+            * (i + 1);
 
     }
 
-    else{
 
-        /* Partial match */
+    /*
+       Generate base price.
 
-        for(const key in products){
+       Demo price range:
+       ₹1,000 to approximately ₹1,00,000
+    */
 
-            if(
-                key.includes(searchText) ||
-                products[key].name
-                .toLowerCase()
-                .includes(searchText)
-            ){
+    let basePrice =
+        1000 +
+        (number % 99000);
 
-                foundKey = key;
 
-                break;
-            }
+    /*
+       Round price
+    */
+
+    basePrice =
+        Math.round(
+            basePrice / 100
+        ) * 100;
+
+
+    /*
+       Different stores
+    */
+
+    const stores = [
+
+        {
+            name:"Amazon",
+            variation:1.08,
+            rating:"4.2",
+            delivery:"Free"
+        },
+
+        {
+            name:"Flipkart",
+            variation:1.00,
+            rating:"4.3",
+            delivery:"Free"
+        },
+
+        {
+            name:"Snapdeal",
+            variation:1.12,
+            rating:"3.9",
+            delivery:"₹49"
+        },
+
+        {
+            name:"Meesho",
+            variation:0.96,
+            rating:"4.0",
+            delivery:"₹49"
+        },
+
+        {
+            name:"Croma",
+            variation:1.05,
+            rating:"4.1",
+            delivery:"Free"
         }
-    }
+
+    ];
 
 
-    if(foundKey){
+    /*
+       Create prices
+    */
 
-        showComparison(
-            products[foundKey]
+    const prices =
+        stores.map(
+            function(store,index){
+
+                /*
+                   Small extra variation
+                   for each store.
+                */
+
+                let price =
+                    basePrice *
+                    store.variation;
+
+
+                price +=
+                    ((number + index * 317)
+                    % 700);
+
+
+                price =
+                    Math.round(
+                        price / 10
+                    ) * 10;
+
+
+                return {
+
+                    store:store.name,
+
+                    price:price,
+
+                    rating:store.rating,
+
+                    delivery:store.delivery
+
+                };
+
+            }
         );
 
-    }
 
-    else{
+    /*
+       Find lowest price
+    */
 
-        showNotFound(searchText);
-
-    }
-
-}
-
-
-/* =====================================================
-   SHOW COMPARISON
-   ===================================================== */
-
-function showComparison(product){
-
-    const prices = product.prices;
-
-
-    /* Find lowest price */
-
-    const lowest =
+    const lowestPrice =
         Math.min(
             ...prices.map(
                 item => item.price
@@ -989,9 +936,11 @@ function showComparison(product){
         );
 
 
-    /* Highest price */
+    /*
+       Find highest price
+    */
 
-    const highest =
+    const highestPrice =
         Math.max(
             ...prices.map(
                 item => item.price
@@ -999,25 +948,52 @@ function showComparison(product){
         );
 
 
-    /* Saving */
+    /*
+       Calculate saving
+    */
 
     const saving =
-        highest - lowest;
+        highestPrice -
+        lowestPrice;
 
+
+    /*
+       Product title
+    */
 
     document.getElementById(
         "productTitle"
-    ).textContent =
-        product.name;
+    ).innerHTML =
+        "Price Comparison: " +
+        escapeHTML(productName);
 
+
+    /*
+       Saving message
+    */
 
     document.getElementById(
         "savingMessage"
     ).innerHTML =
-        "💚 You can save ₹" +
-        saving.toLocaleString("en-IN") +
-        " by buying from the lowest-priced store below.";
 
+        "🏆 Cheapest price: ₹" +
+
+        lowestPrice.toLocaleString(
+            "en-IN"
+        ) +
+
+        " &nbsp; | &nbsp; You can save ₹" +
+
+        saving.toLocaleString(
+            "en-IN"
+        ) +
+
+        " compared with the highest price.";
+
+
+    /*
+       Get table
+    */
 
     const table =
         document.getElementById(
@@ -1028,156 +1004,174 @@ function showComparison(product){
     table.innerHTML = "";
 
 
-    prices.forEach(item => {
+    /*
+       Add store rows
+    */
 
-        const isLowest =
-            item.price === lowest;
+    prices.forEach(
+        function(item){
+
+            const isLowest =
+                item.price ===
+                lowestPrice;
 
 
-        const row =
-            document.createElement("tr");
+            const row =
+                document.createElement(
+                    "tr"
+                );
 
 
-        if(isLowest){
+            if(isLowest){
 
-            row.className = "lowest";
+                row.className =
+                    "lowest-row";
+
+            }
+
+
+            /*
+               Store website URL
+
+               These open the store homepage.
+               Real product links can be added later.
+            */
+
+            const storeURLs = {
+
+                "Amazon":
+                    "https://www.amazon.in/",
+
+                "Flipkart":
+                    "https://www.flipkart.com/",
+
+                "Snapdeal":
+                    "https://www.snapdeal.com/",
+
+                "Meesho":
+                    "https://www.meesho.com/",
+
+                "Croma":
+                    "https://www.croma.com/"
+
+            };
+
+
+            row.innerHTML = `
+
+                <td>
+
+                    <strong>
+                        ${item.store}
+                    </strong>
+
+                </td>
+
+
+                <td>
+
+                    <span class="rating">
+
+                        ★ ${item.rating}
+
+                    </span>
+
+                </td>
+
+
+                <td>
+
+                    <span
+                        class="${
+                            isLowest
+                            ?
+                            "lowest-price"
+                            :
+                            ""
+                        }"
+                    >
+
+                        ₹${item.price.toLocaleString(
+                            "en-IN"
+                        )}
+
+                    </span>
+
+
+                    ${
+                        isLowest
+                        ?
+                        `
+                        <span
+                            class="lowest-label"
+                        >
+                            🏆 LOWEST
+                        </span>
+                        `
+                        :
+                        ""
+                    }
+
+                </td>
+
+
+                <td>
+
+                    ${item.delivery}
+
+                </td>
+
+
+                <td>
+
+                    <button
+                        class="view-btn"
+                        onclick="openStore(
+                            '${storeURLs[item.store]}'
+                        )"
+                    >
+
+                        View
+
+                    </button>
+
+                </td>
+
+            `;
+
+
+            table.appendChild(
+                row
+            );
 
         }
+    );
 
 
-        row.innerHTML = `
-
-            <td>
-                <strong>
-                    ${item.store}
-                </strong>
-            </td>
-
-            <td>
-                <span class="rating">
-                    ★ ${item.rating}
-                </span>
-            </td>
-
-            <td>
-
-                <span
-                    class="${
-                        isLowest
-                        ? "lowest-price"
-                        : ""
-                    }"
-                >
-                    ₹${item.price.toLocaleString("en-IN")}
-                </span>
-
-                ${
-                    isLowest
-                    ?
-                    '<span class="lowest-label">🏆 Lowest Price</span>'
-                    :
-                    ''
-                }
-
-            </td>
-
-            <td>
-                ${
-                    isLowest
-                    ?
-                    '<span style="color:#16812c;font-weight:bold;">✓ Lowest Price</span>'
-                    :
-                    item.status
-                }
-            </td>
-
-            <td>
-
-                <button
-                    class="view-btn"
-                    onclick="openStore('${item.url}')"
-                >
-                    View
-                </button>
-
-            </td>
-        `;
-
-
-        table.appendChild(row);
-
-    });
-
+    /*
+       Show comparison
+    */
 
     document.getElementById(
         "comparison"
-    ).style.display = "block";
+    ).style.display =
+        "block";
 
+
+    /*
+       Scroll to comparison
+    */
 
     document.getElementById(
         "comparison"
     ).scrollIntoView({
+
         behavior:"smooth"
+
     });
 
 }
 
-
-/* =====================================================
-   PRODUCT NOT FOUND
-   ===================================================== */
-
-function showNotFound(searchText){
-
-    document.getElementById(
-        "comparison"
-    ).style.display = "block";
-
-
-    document.getElementById(
-        "productTitle"
-    ).textContent =
-        "Product Not Found";
-
-
-    document.getElementById(
-        "savingMessage"
-    ).innerHTML =
-        "❌ No demo price data available for <b>" +
-        searchText +
-        "</b>. Try Samsung S25 Ultra, iPhone 16, Smartwatch, ASUS VivoBook, Wireless Headphones or Nike Shoes.";
-
-
-    document.getElementById(
-        "priceTable"
-    ).innerHTML = `
-
-        <tr>
-
-            <td
-                colspan="5"
-                style="
-                    text-align:center;
-                    padding:40px;
-                "
-            >
-
-                Product data is not available yet.
-
-            </td>
-
-        </tr>
-
-    `;
-
-
-    document.getElementById(
-        "comparison"
-    ).scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
 
 
 /* =====================================================
@@ -1193,7 +1187,29 @@ function openStore(url){
 
 }
 
+
+
+/* =====================================================
+   HTML ESCAPE
+   ===================================================== */
+
+function escapeHTML(text){
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+    div.textContent =
+        text;
+
+    return div.innerHTML;
+
+}
+
 </script>
 
+
 </body>
+
 </html>
